@@ -75,6 +75,17 @@ nav a img {
     color: white;
 }
 
+#nav-cinco{
+    color: rgb(48, 48, 48);
+    text-emphasis-color: black;
+    font-size:35px;
+    font-weight: 500;
+}
+
+#nav-cinco:hover{
+    color: white;
+}
+
 .inicio {
     border: 2px solid black;
     padding:  1%;
@@ -154,3 +165,4 @@ nav a img {
 .search-form button:hover {
     background-color: rgba(0, 0, 0, 1);
 }
+

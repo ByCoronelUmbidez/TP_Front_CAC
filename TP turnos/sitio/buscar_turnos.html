@@ -28,6 +28,9 @@
                     <li class="nav-item">
                         <a class="nav-link disabled" href="./contacto.html" id="nav-cuatro">Contacto</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="./profesionales_sede.html" id="nav-cinco">Médicos</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -35,17 +38,25 @@
     <div class="container">
         <form class="search-form">
             <h2>Buscar Turnos</h2>
-            <label for="specialty">Especialidad:</label>
-            <select id="specialty" name="specialty">
-                <option value="pediatría">Pediatría</option>
+            <label for="especialidad">Especialidad:</label>
+            <select id="especialidad" name="especialidad">
                 <option value="cardiología">Cardiología</option>
+                <option value="odontología">Odontología</option>
+                <option value="pediatría">Pediatría</option>
                 <option value="dermatología">Dermatología</option>
-                <!-- Agregar más opciones según las especialidades que tengas -->
+                <option value="ginecología">Ginecología</option>
+                <option value="oftalmología">Oftalmología</option>
+                <option value="ortopedia">Ortopedia</option>
+                <option value="psicología">Psicología</option>
+                <option value="urología">Urología</option>
+                <option value="endocrinología">Endocrinología</option>
             </select>
 
-            <label for="location">Ubicación:</label>
-            <input type="text" id="location" name="location" placeholder="Ingrese su ubicación">
-
+            <label for="location">Sede:</label>
+            <select id="Sedes" name="sede">
+                <option value="Central">Sede Central</option>
+                <option value="Norte">Sucursal Norte</option>
+            </select>
             <label for="date">Fecha:</label>
             <input type="date" id="date" name="date">
 

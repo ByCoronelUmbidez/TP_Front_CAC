@@ -166,3 +166,68 @@ nav a img {
     background-color: rgba(0, 0, 0, 1);
 }
 
+#tabla-profesionales{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#tabla-sedes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.inicio {
+    border: 2px solid black;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 5px;
+    background-color: lightseagreen;
+    max-width: 600px;
+    margin: auto;
+}
+
+.inicio .form-group {
+    text-align: left;
+}
+
+.inicio label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.inicio input[type="text"],
+.inicio input[type="email"],
+.inicio textarea,
+.inicio select {
+    background-color: lightcyan;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.inicio .form-check-input {
+    margin-left: 0;
+}
+
+.inicio button {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.inicio button:hover {
+    background-color: rgba(0, 0, 0, 1);
+}

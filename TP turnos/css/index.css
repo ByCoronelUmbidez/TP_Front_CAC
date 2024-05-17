@@ -1,89 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
 * {
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings:"wdth" 100;
     box-sizing: border-box;
-    text-align: center;   
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin-left: 35px;
+    margin-right:35px;
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
-
-body {
-    background-color: lightseagreen;
-    margin: 1%;
-}
-
 header, main, nav {
-    border: 2px solid black;
+    border: 0.5px solid lightcyan;
     padding:  1%;
     margin:  1%;
     border-radius: 5px;
-    background-color: lightseagreen;
+    background-color: rgb(114, 207, 203);
 }
-
-li {
-    border: 2px solid black;
-    padding:  1%;
-    margin:  1%;
-    border-radius: 5px;
-    background-color: lightcyan;
+.contenedor{
+    display:flex;
+    justify-content:center;
+    flex-wrap: wrap;
 }
-
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+img{
+    width: 400px;
+    height: 200px;
 }
-
-a {
-    text-emphasis-color: black;
-    font-size:x-large;
-    text-decoration: solid;
+.contenedor_2{
+    display:flex;
+    justify-content: left;
+    align-items:left;
+    flex-wrap: wrap;
+    width:50px;
+    height:25px;
 }
-
-table {
-    width: 100%;
-    margin: 1%;
-  }
-
- thead {
-    border: 1px solid #ddd; 
-    border-collapse: collapse; 
-    background-color: #2f424e; 
-    color: white;
- } 
-
- button, #boton {
-    border-collapse: separate; 
-    background-color: #2f424e; 
-    color: white;
- }
-  
-  th, tr {
-    padding: 8px; 
-    text-align: center; 
-    border-bottom: 1px solid #ddd; 
-  }   
-  
- 
-  td {
-    padding: 8px; 
-    text-align: center; 
-    border-bottom: 1px solid #ddd; 
-    box-sizing: border-box;
-  }
-  
-  tbody {
-    background-color: #f9f9f9; 
-    box-sizing: content-box;
-  }
-
-#tabla-profesionales td, #tabla-sedes td {
-    width: calc(100% / 3); 
-    padding: 8px; 
-    text-align: center; 
-    border-bottom: 1px solid #ddd; 
-  }
+body {
+    background-color: rgb(170, 228, 225);
+}
+h3{
+    color:aliceblue;
+    background-color: rgb(90, 173, 173);
+    text-align:left;
+    margin:10px;
+    font-weight:bold;
+    border-radius: 10px;
+    padding: 15px;
+}
+.fa-brands{
+    align-content: center;
+    display:flex;
+    margin:10px;
+    width: 28px;
+    height:28px;
+    border-radius:50%;
+    background-color:gray;
+    color:white;
+    box-shadow: 3px 3px 5px black;
+}
+h4{
+    color:rgb(35, 44, 41);
+    text-align: left;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 15px;
+}
+li,ul{
+    color:rgb(35, 44, 41);
+    text-align: left;
+    border-radius: 10px;
+}

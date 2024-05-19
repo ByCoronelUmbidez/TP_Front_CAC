@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
     box-sizing: border-box;
     text-align: center;
@@ -13,7 +15,19 @@ body {
     flex-direction: column;
 }
 
-header, main, nav {
+header nav {
+    background-color: lightseagreen;
+    text-emphasis-color: black;
+    border: 2px solid black;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 5px;
+    border-color: rgb(0, 0, 0);
+}
+
+header,
+main,
+nav {
     border: 0.5px solid lightcyan;
     padding: 1%;
     margin: 1%;
@@ -50,8 +64,10 @@ img {
 iframe {
     border: 0;
     width: 100%;
-    max-width: 600px; /* Adjust max-width as needed */
-    height: 350px; /* Adjust height as needed */
+    max-width: 600px;
+    /* Adjust max-width as needed */
+    height: 350px;
+    /* Adjust height as needed */
 }
 
 h3 {
@@ -132,24 +148,24 @@ h4 {
     height: 40px;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-around;
 }
 
-.nav-lista{
+.nav-lista {
     display: flex;
     align-items: center;
 }
 
 
-.nav-inicio{
-    display:flex;
+.nav-inicio {
+    display: flex;
     justify-content: start;
     align-items: center;
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -157,32 +173,34 @@ nav{
 
 
 
-.nav-item{
+.nav-item {
     margin: 10px;
     list-style: none;
 
 }
-.nav-enlace{
+
+.nav-enlace {
     text-decoration: none;
     font-size: 20px;
     font-weight: 500;
     color: rgb(44, 84, 83);
 }
 
-.nav-enlace:hover{
+.nav-enlace:hover {
     color: white;
 }
 
-.inicio-icono{
+.inicio-icono {
     width: 60px;
     height: 60px;
 }
 
-.buscador{
+.buscador {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 /* Style for the container */
 .container {
@@ -195,7 +213,8 @@ nav{
 }
 
 /* Style for the headings */
-h1, h2 {
+h1,
+h2 {
     font-family: Arial, sans-serif;
     color: #333;
 }
@@ -215,8 +234,10 @@ textarea {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* Ensure padding and border are included in width */
-    background-color: #fff; /* Ensure background is white */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in width */
+    background-color: #fff;
+    /* Ensure background is white */
 }
 
 /* Style for select dropdown */
@@ -227,7 +248,8 @@ select {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-    background-color: #fff; /* Ensure background is white */
+    background-color: #fff;
+    /* Ensure background is white */
 }
 
 /* Style for checkbox */
@@ -253,3 +275,113 @@ input[type="checkbox"] {
     font-weight: normal;
     color: aliceblue;
 }
+
+
+/* Estilos de .inicio aplicados al formulario de búsqueda */
+.container {
+    width: 100%;
+    /* Asegura que el contenedor ocupe todo el ancho disponible */
+    border: 2px solid black;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 5px;
+    background-color: lightseagreen;
+}
+
+.search-form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.search-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.search-form select,
+.search-form input[type="text"],
+.search-form input[type="date"] {
+    background-color: lightcyan;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.search-form button {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-form button:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-emphasis-color: black;
+    font-size: x-large;
+    text-decoration: solid;
+}
+
+table {
+    width: 100%;
+    margin: 1%;
+}
+
+thead {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    background-color: #2f424e;
+    color: white;
+}
+
+button,
+#boton {
+    border-collapse: separate;
+    background-color: #2f424e;
+    color: white;
+}
+
+th,
+tr {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+
+td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+tbody {
+    background-color: #f9f9f9;
+    box-sizing: content-box;
+}
+
+#tabla-profesionales td,
+#tabla-sedes td {
+    width: calc(100% / 3);
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+

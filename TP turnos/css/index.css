@@ -14,6 +14,15 @@ body {
     display: flex;
     flex-direction: column;
 }
+header nav {
+    background-color: lightseagreen;
+    text-emphasis-color: black;
+    border: 2px solid black;
+    padding:  1%;
+    margin:  1%;
+    border-radius: 5px;
+    border-color:rgb(0, 0, 0) ;
+}
 
 header, main, nav {
     border: 0.5px solid lightcyan;
@@ -186,3 +195,54 @@ nav{
     align-items: center;
 }
 
+
+
+
+
+
+/* Estilos de .inicio aplicados al formulario de búsqueda */
+.container {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    border: 2px solid black;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 5px;
+    background-color: lightseagreen;
+}
+
+.search-form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.search-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.search-form select,
+.search-form input[type="text"],
+.search-form input[type="date"] {
+    background-color: lightcyan;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.search-form button {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-form button:hover {
+    background-color: rgba(0, 0, 0, 1);
+}

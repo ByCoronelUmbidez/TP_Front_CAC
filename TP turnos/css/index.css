@@ -184,3 +184,72 @@ nav{
     align-items: center;
 }
 
+/* Style for the container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid lightcyan;
+    border-radius: 5px;
+    background-color: rgb(114, 207, 203);
+}
+
+/* Style for the headings */
+h1, h2 {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Style for form labels */
+label {
+    font-weight: bold;
+    color: aliceblue;
+}
+
+/* Style for form inputs and text area */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    background-color: #fff; /* Ensure background is white */
+}
+
+/* Style for select dropdown */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff; /* Ensure background is white */
+}
+
+/* Style for checkbox */
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Style for submit button */
+.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(90, 173, 173);
+    color: aliceblue;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Style for checkbox label */
+.form-check-label {
+    font-weight: normal;
+    color: aliceblue;
+}

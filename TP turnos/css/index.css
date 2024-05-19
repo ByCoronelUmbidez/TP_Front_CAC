@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
     box-sizing: border-box;
     text-align: center;
@@ -6,6 +8,11 @@
     margin-right:35px;
     margin-top: 10px;
     margin-bottom: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
 }
 header, main, nav {
     border: 0.5px solid lightcyan;
@@ -37,7 +44,7 @@ body {
 h3{
     color:aliceblue;
     background-color: rgb(90, 173, 173);
-    text-align:left;
+    text-align:center;
     margin:10px;
     font-weight:bold;
     border-radius: 10px;
@@ -61,8 +68,68 @@ h4{
     border-radius: 10px;
     padding: 15px;
 }
-li,ul{
-    color:rgb(35, 44, 41);
-    text-align: left;
-    border-radius: 10px;
+
+li {
+    border: 2px solid black;
+    padding:  1%;
+    margin:  1%;
+    border-radius: 5px;
+    background-color: lightcyan;
 }
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-emphasis-color: black;
+    font-size:x-large;
+    text-decoration: solid;
+}
+
+table {
+    width: 100%;
+    margin: 1%;
+  }
+
+ thead {
+    border: 1px solid #ddd; 
+    border-collapse: collapse; 
+    background-color: #2f424e; 
+    color: white;
+ } 
+
+ button, #boton {
+    border-collapse: separate; 
+    background-color: #2f424e; 
+    color: white;
+ }
+  
+  th, tr {
+    padding: 8px; 
+    text-align: center; 
+    border-bottom: 1px solid #ddd; 
+  }   
+  
+ 
+  td {
+    padding: 8px; 
+    text-align: center; 
+    border-bottom: 1px solid #ddd; 
+    box-sizing: border-box;
+  }
+  
+  tbody {
+    background-color: #f9f9f9; 
+    box-sizing: content-box;
+  }
+
+#tabla-profesionales td, #tabla-sedes td {
+    width: calc(100% / 3); 
+    padding: 8px; 
+    text-align: center; 
+    border-bottom: 1px solid #ddd; 
+  }

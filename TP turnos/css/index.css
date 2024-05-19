@@ -1,127 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
     box-sizing: border-box;
     text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background-color: rgb(193, 193, 193);
+    background-color: rgb(170, 228, 225);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
 header nav {
     background-color: lightseagreen;
     text-emphasis-color: black;
     border: 2px solid black;
-    padding:  1%;
-    margin:  1%;
+    padding: 1%;
+    margin: 1%;
     border-radius: 5px;
-    border-color:rgb(0, 0, 0) ;
+    border-color: rgb(0, 0, 0);
 }
 
-header nav div {
-    margin-right: 140px;
+header,
+main,
+nav {
+    border: 0.5px solid lightcyan;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 5px;
+    background-color: rgb(114, 207, 203);
+}
+
+footer {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    padding: 10px 0;
 }
 
+.contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-nav a {
+img {
+    width: 400px;
+    height: 200px;
+}
+
+.contenedor_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+iframe {
+    border: 0;
+    width: 100%;
+    max-width: 600px;
+    /* Adjust max-width as needed */
+    height: 350px;
+    /* Adjust height as needed */
+}
+
+h3 {
+    color: aliceblue;
+    background-color: rgb(90, 173, 173);
+    text-align: center;
+    margin: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.fa-brands {
+    align-content: center;
+    display: flex;
+    margin: 10px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: gray;
+    color: white;
+    box-shadow: 3px 3px 5px black;
+}
+
+h4 {
+    color: rgb(35, 44, 41);
+    text-align: left;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-inicio {
+    color: rgb(35, 44, 41);
+    text-align: left;
+    border-radius: 10px;
+    list-style: none;
     display: flex;
     align-items: center;
-    color: rgba(0, 0, 0, 0.863);
-    text-emphasis-color: rgb(0, 0, 0);
-    font-size:27px;
-    font-weight: 700;
+    justify-content: center;
+    color: aliceblue;
+    background-color: rgb(90, 173, 173);
+    text-align: center;
+    margin: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 15px;
 }
 
-nav a:hover{
+.listado-inicio {
+    color: rgb(35, 44, 41);
+    text-align: left;
+    border-radius: 10px;
+    list-style: none;
+}
+
+.link-inicio {
+    text-decoration: none;
     color: white;
 }
 
-nav a img {
-    width: 50px;
+.link-inicio:hover {
+    text-decoration: none;
+    color: rgb(196, 255, 252);
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes-img {
+    width: 40px;
+    height: 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-lista {
+    display: flex;
+    align-items: center;
 }
 
 
-#nav-dos{
-    color: rgb(48, 48, 48);
-    text-emphasis-color: black;
-    font-size:35px;
+#contacto-form {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.nav-item {
+    margin: 10px;
+    list-style: none;
+
+}
+
+.nav-enlace {
+    text-decoration: none;
+    font-size: 20px;
     font-weight: 500;
+    color: rgb(44, 84, 83);
 }
 
-#nav-dos:hover{
+.nav-enlace:hover {
     color: white;
 }
 
-#nav-tres{
-    color: rgb(48, 48, 48);
-    text-emphasis-color: black;
-    font-size:35px;
-    font-weight: 500;
+.inicio-icono {
+    width: 60px;
+    height: 60px;
 }
 
-#nav-tres:hover{
-    color: white;
-}
-
-#nav-cuatro{
-    color: rgb(48, 48, 48);
-    text-emphasis-color: black;
-    font-size:35px;
-    font-weight: 500;
-}
-
-#nav-cuatro:hover{
-    color: white;
-}
-
-#nav-cinco{
-    color: rgb(48, 48, 48);
-    text-emphasis-color: black;
-    font-size:35px;
-    font-weight: 500;
-}
-
-#nav-cinco:hover{
-    color: white;
-}
-
-.inicio {
-    border: 2px solid black;
-    padding:  1%;
-    margin:  1%;
-    border-radius: 5px;
-    background-color: lightseagreen;
-}
-
-.inicio li {
-    border: 2px solid black;
-    padding:  1%;
-    margin:  1%;
-    border-radius: 5px;
-    background-color: lightcyan;
+.buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-.inicio ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.inicio ul li a{
-    text-decoration: none;    text-emphasis-color: black;
-    font-size:x-large;
-}
-
-
-
-
-
-
-/* Estilos de .inicio aplicados al formulario de búsqueda... */
+/* Style for the container */
 .container {
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid lightcyan;
+    border-radius: 5px;
+    background-color: rgb(114, 207, 203);
+}
+
+/* Style for the headings */
+h1,
+h2 {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Style for form labels */
+label {
+    font-weight: bold;
+    color: aliceblue;
+}
+
+/* Style for form inputs and text area */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in width */
+    background-color: #fff;
+    /* Ensure background is white */
+}
+
+/* Style for select dropdown */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    /* Ensure background is white */
+}
+
+/* Style for checkbox */
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Style for submit button */
+.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(90, 173, 173);
+    color: aliceblue;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Style for checkbox label */
+.form-check-label {
+    font-weight: normal;
+    color: aliceblue;
+}
+
+
+/* Estilos de .inicio aplicados al formulario de búsqueda */
+.container {
+    width: 100%;
+    /* Asegura que el contenedor ocupe todo el ancho disponible */
     border: 2px solid black;
     padding: 1%;
     margin: 1%;
@@ -166,68 +325,63 @@ nav a img {
     background-color: rgba(0, 0, 0, 1);
 }
 
-#tabla-profesionales{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-
-#tabla-sedes{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+a {
+    text-emphasis-color: black;
+    font-size: x-large;
+    text-decoration: solid;
 }
 
-
-.inicio {
-    border: 2px solid black;
-    padding: 1%;
-    margin: 1%;
-    border-radius: 5px;
-    background-color: lightseagreen;
-    max-width: 600px;
-    margin: auto;
-}
-
-.inicio .form-group {
-    text-align: left;
-}
-
-.inicio label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.inicio input[type="text"],
-.inicio input[type="email"],
-.inicio textarea,
-.inicio select {
-    background-color: lightcyan;
+table {
     width: 100%;
+    margin: 1%;
+}
+
+thead {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    background-color: #2f424e;
+    color: white;
+}
+
+button,
+#boton {
+    border-collapse: separate;
+    background-color: #2f424e;
+    color: white;
+}
+
+th,
+tr {
     padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #000000;
-    border-radius: 4px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+
+td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
     box-sizing: border-box;
 }
 
-.inicio .form-check-input {
-    margin-left: 0;
+tbody {
+    background-color: #f9f9f9;
+    box-sizing: content-box;
 }
 
-.inicio button {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+#tabla-profesionales td,
+#tabla-sedes td {
+    width: calc(100% / 3);
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
 }
 
-.inicio button:hover {
-    background-color: rgba(0, 0, 0, 1);
-}

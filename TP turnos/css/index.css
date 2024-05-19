@@ -246,3 +246,60 @@ nav{
 .search-form button:hover {
     background-color: rgba(0, 0, 0, 1);
 }
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-emphasis-color: black;
+    font-size:x-large;
+    text-decoration: solid;
+}
+
+table {
+    width: 100%;
+    margin: 1%;
+  }
+
+ thead {
+    border: 1px solid #ddd; 
+    border-collapse: collapse; 
+    background-color: #2f424e; 
+    color: white;
+ } 
+
+ button, #boton {
+    border-collapse: separate; 
+    background-color: #2f424e; 
+    color: white;
+ }
+  
+  th, tr {
+    padding: 8px; 
+    text-align: center; 
+    border-bottom: 1px solid #ddd; 
+  }   
+  
+ 
+  td {
+    padding: 8px; 
+    text-align: center; 
+    border-bottom: 1px solid #ddd; 
+    box-sizing: border-box;
+  }
+  
+  tbody {
+    background-color: #f9f9f9; 
+    box-sizing: content-box;
+  }
+
+#tabla-profesionales td, #tabla-sedes td {
+    width: calc(100% / 3); 
+    padding: 8px; 
+    text-align: center; 
+    border-bottom: 1px solid #ddd; 
+  }

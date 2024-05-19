@@ -385,3 +385,26 @@ tbody {
     border-bottom: 1px solid #ddd;
 }
 
+/* Styling for main container */
+.contacto-container {
+    padding: 2%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+/* Styling for contact information titles */
+.contacto-title {
+    color: lightseagreen;
+}
+
+/* Styling for contact information */
+.contacto-info {
+    color: black;
+}
+
+/* Styling for contact form container */
+.contacto-form-container {
+    margin-top: 20px;
+}

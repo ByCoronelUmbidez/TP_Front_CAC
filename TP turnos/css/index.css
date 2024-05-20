@@ -41,9 +41,9 @@ nav {
 }
 .nav-lista {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-left: 55vh;
+    justify-content: center; /* agregué para que queden centrados en la barra de nav*/
+    flex: 2;/* agregué para que queden centrados en la barra de nav*/
 }
 
 .nav-ul {

@@ -100,12 +100,13 @@ iframe {
     padding: 10px;
 }
 .bienvenida-contacto h1{
-    color: white;
-    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+    color: rgb(0, 0, 0);
+    text-shadow: 0.2px 0.5px 0.2px rgb(255, 255, 255);
+
 }
 .bienvenida-contacto h2{
     color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+    text-shadow: 0.2px 0.5px 0.2px rgb(0, 0, 0);
 }
 
 
@@ -438,6 +439,16 @@ tbody {
 }
 
 /* Estilos de las cards del inicio. De acá para abajo modificque, de arriba, solo lineas de nav */
+.bienvenida-index h1{
+    color: rgb(0, 0, 0);
+    text-shadow: 0.2px 0.5px 0.2px rgb(255, 255, 255);
+
+}  
+
+.bienvenida-index h3{
+    color: rgb(0, 0, 0);
+    text-shadow: 0.2px 0.5px 0.2px rgb(255, 255, 255);
+}  
 
 .cards {
     display: flex;
@@ -451,7 +462,8 @@ tbody {
     flex: 30%;
     margin: 10 px;
     border: 5px;
-    color: rgb(35, 44, 41);
+    border: 0.5px solid lightcyan;
+    color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     padding: 5%;
@@ -462,13 +474,16 @@ tbody {
 }
 
 .card:hover {
+    background-color: lightcyan;
+    color: black;
+    text-shadow: 1px 2px 1px rgb(255, 255, 255);
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card h1 {
     padding-bottom: 15px;
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     text-emphasis-color: black;
     font-size: x-large;
@@ -483,10 +498,13 @@ tbody {
     padding: 20px;
     text-align: center;
 }
+.card .footer button{
+    border-radius: 15px;
+}
 
 .card .footer button a{
-    color: white;
-    border: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
@@ -494,7 +512,10 @@ tbody {
 }
 
 .card .footer button:hover {
-    background-color: lightcyan;
+    background-color: rgb(90, 173, 173);
+}
+.card .footer button a:hover {
+    background-color: rgb(251, 255, 211);
 }
 
 .card p {

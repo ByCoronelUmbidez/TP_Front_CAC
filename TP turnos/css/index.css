@@ -16,7 +16,7 @@ body {
 }
 
 header nav {
-    background-color: lightseagreen;
+    background-color: rgb(236, 255, 255);
     text-emphasis-color: black;
     border: 2px solid black;
     padding: 1%;
@@ -34,6 +34,39 @@ nav {
     border-radius: 5px;
     background-color: rgb(114, 207, 203);
 }
+.nav-inicio{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.nav-lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 55vh;
+}
+
+.nav-ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 10px;
+    list-style: none;
+
+}
+
+.nav-enlace {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.nav-enlace:hover {
+    color: rgb(114, 207, 203);
+}
 
 footer {
     display: flex;
@@ -41,17 +74,6 @@ footer {
     align-items: center;
     margin-top: auto;
     padding: 10px 0;
-}
-
-.contenedor {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-img {
-    width: 400px;
-    height: 200px;
 }
 
 .contenedor_2 {
@@ -70,14 +92,59 @@ iframe {
     /* Adjust height as needed */
 }
 
-h3 {
-    color: aliceblue;
-    background-color: rgb(90, 173, 173);
-    text-align: center;
+.bienvenida-contacto{
+    background-color: rgb(170, 228, 225);
+    border: 0.5px solid lightcyan;
     margin: 10px;
-    font-weight: bold;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
+}
+.bienvenida-contacto h1{
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+}
+.bienvenida-contacto h2{
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+}
+
+
+.contenedor-img-contacto {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px;
+    margin-top: 10px;
+    display: inline-block;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: #ffffff83;
+}
+
+.contenedor-img-contacto img {
+    border: #000000;
+    width: 450px;
+    height: 220px;
+    margin: 10px;
+    margin-left:10px ;
+    margin-right:10px ;
+}
+
+.contactanos-h2{
+    margin-bottom: 10px;
+    font-size:xx-large;
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+.main-contacto h3 {
+    border: 0.5px solid lightcyan;
+    background-color: rgb(170, 228, 225);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    color: aliceblue;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 0.5px rgb(0, 0, 0);
+
 }
 
 .fa-brands {
@@ -137,7 +204,12 @@ h4 {
     color: rgb(196, 255, 252);
 }
 
-.redes {
+.redes-ul li {
+    display: inline-block; 
+    margin-right: 10px;
+}
+
+.redes-icono {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,15 +220,16 @@ h4 {
     height: 40px;
 }
 
+.iframe-enlace{
+    text-decoration: none;
+    color: white;
+    font-size: medium;
+    margin-bottom: 10px;}
+
 nav {
     display: flex;
-    justify-content: space-around;
 }
 
-.nav-lista {
-    display: flex;
-    align-items: center;
-}
 
 
 #contacto-div {
@@ -165,30 +238,6 @@ nav {
     align-items: center;
 }
 
-.nav-links {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-
-
-.nav-item {
-    margin: 10px;
-    list-style: none;
-
-}
-
-.nav-enlace {
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
-    color: rgb(44, 84, 83);
-}
-
-.nav-enlace:hover {
-    color: white;
-}
 
 .inicio-icono {
     width: 60px;
@@ -203,10 +252,9 @@ nav {
 
 
 .contenedor-turno {
-    width: 90%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid lightcyan;
+    border: 0.5px solid lightcyan;
+    padding: 1%;
+    margin: 1%;
     border-radius: 5px;
     background-color: rgb(114, 207, 203);
 }
@@ -220,6 +268,7 @@ h2 {
 label {
     font-weight: bold;
     color: aliceblue;
+    text-shadow: 0.5px 0.5px 0.5px rgb(0, 0, 0);
 }
 
 /* Style for form inputs and text area */
@@ -252,17 +301,6 @@ input[type="checkbox"] {
     margin-right: 5px;
 }
 
-.btn-enviar {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(0, 119, 255);
-    color: aliceblue;
-    font-size: 16px;
-    cursor: pointer;
-}
 
 .check-label {
     font-weight: normal;
@@ -270,14 +308,7 @@ input[type="checkbox"] {
 }
 
 
-.contenedor-formulario {
-    width: 100%;
-    border: 2px solid black;
-    padding: 1%;
-    margin: 1%;
-    border-radius: 5px;
-    background-color: lightseagreen;
-}
+
 
 .form-buscador h2 {
     text-align: center;
@@ -400,4 +431,61 @@ tbody {
 .swal2-confirm {
     background-color: #3085d6;
     color: #fff;
+}
+
+
+.contenedor-formulario {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid lightcyan;
+    border-radius: 5px;
+    background-color: rgb(114, 207, 203);
+}
+
+.contacto-form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contacto-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-motivo select,
+.form-mensaje textarea,
+.form-nombre input[type="text"],
+.form-asunto input[type="text"],
+.form-email input[type="email"],
+.form-checkbox input[type="checkbox"]{
+    background-color: lightcyan;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#btnEnviar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#btnEnviar:hover{
+    background-color: rgb(0, 0, 0);
+}
+
+
+#btnEnviar[disabled] {
+    background-color: #ccc; /* Color de fondo gris claro */
+    color: #888; /* Color de texto gris más claro */
+    cursor: not-allowed; /* Cursor no disponible */
 }

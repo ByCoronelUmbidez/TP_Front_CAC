@@ -71,7 +71,7 @@ const data = {
             sede: "Sucursal Norte"
         }
     ],
-    locaciones: [
+    sedees: [
         {
             sede: "Sede Central",
             direccion: "Calle Principal 123",
@@ -85,66 +85,53 @@ const data = {
     ]
 };
 
-
-
-// Obtener referencias a los elementos del formulario
 const especialidadSelect = document.getElementById('especialidad');
-const locacionSelect = document.getElementById('locacion');
+const sedeSelect = document.getElementById('sede');
 const fechaSelect = document.getElementById('fecha');
 const submitBtn = document.getElementById('submitBtn');
 
-// Función para filtrar la información y actualizar las opciones de fecha
 function actualizarHorariosDisponibles() {
     const especialidadSeleccionada = especialidadSelect.value;
-    const locacionSeleccionada = locacionSelect.value;
+    const sedeSeleccionada = sedeSelect.value;
 
-    // Filtrar los profesionales según la especialidad y la sede seleccionadas
-    const profesionalesFiltrados = data.profesionales.filter(profesional =>
-        profesional.especialidad === especialidadSeleccionada &&
-        profesional.sede === locacionSeleccionada
-    );
-
-    // Crear un conjunto de todos los días y horarios disponibles con los nombres de los médicos
-    const horariosDisponibles = new Set();
-    profesionalesFiltrados.forEach(profesional => {
-        profesional.dia.forEach(dia => {
-            profesional.horario.forEach(horario => {
-                horariosDisponibles.add(`${dia} ${horario} - ${profesional.nombre}`);
+    const horariosDisponibles = data.profesionales.reduce((acc, profesional) => {
+        if (profesional.especialidad === especialidadSeleccionada && profesional.sede === sedeSeleccionada) {
+            profesional.dia.forEach(dia => {
+                profesional.horario.forEach(horario => {
+                    acc.push(`${dia} ${horario} - ${profesional.nombre}`);
+                });
             });
-        });
-    });
+        }
+        return acc;
+    }, []);
 
-    // Limpiar las opciones actuales de fecha y agregar las nuevas opciones
     fechaSelect.innerHTML = '<option value="" disabled selected>Seleccione un horario</option>';
-    if (horariosDisponibles.size > 0) {
-        horariosDisponibles.forEach(horario => {
-            const option = document.createElement('option');
-            option.text = horario;
-            fechaSelect.add(option);
-        });
+    if (horariosDisponibles.length > 0) {
+        horariosDisponibles.forEach(horario => fechaSelect.add(new Option(horario)));
         fechaSelect.disabled = false;
-        submitBtn.disabled = true;
     } else {
-        const option = document.createElement('option');
-        option.text = 'No hay médicos disponibles';
-        fechaSelect.add(option);
+        fechaSelect.add(new Option('No hay médicos disponibles'));
         fechaSelect.disabled = true;
-        submitBtn.disabled = true;
     }
 }
 
-// Función para habilitar/deshabilitar el botón de enviar
 function verificarSeleccionHorario() {
     submitBtn.disabled = fechaSelect.value === 'No hay médicos disponibles' || fechaSelect.value === '';
 }
 
-// Asociar la función actualizarHorariosDisponibles al evento de cambio en los select de especialidad y sede
 especialidadSelect.addEventListener('change', actualizarHorariosDisponibles);
-locacionSelect.addEventListener('change', actualizarHorariosDisponibles);
+sedeSelect.addEventListener('change', actualizarHorariosDisponibles);
 fechaSelect.addEventListener('change', verificarSeleccionHorario);
 
-// Deshabilitar el botón de enviar por defecto
 submitBtn.disabled = true;
+
+submitBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    const fechaSeleccionada = fechaSelect.value;
+    if (fechaSeleccionada && fechaSeleccionada !== 'No hay médicos disponibles') {
+        seleccionarTurno(fechaSeleccionada);
+    }
+});
 
 function seleccionarTurno(turnoSeleccionado) {
     Swal.fire({
@@ -160,13 +147,3 @@ function seleccionarTurno(turnoSeleccionado) {
         }
     });
 }
-
-
-// Llama a la función seleccionarTurno cuando se hace clic en el botón "Elegir Turno"
-submitBtn.addEventListener('click', function(event) {
-    event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
-    const fechaSeleccionada = document.getElementById('fecha').value;
-    if (fechaSeleccionada && fechaSeleccionada !== 'No hay médicos disponibles') {
-        seleccionarTurno(fechaSeleccionada);
-    }
-});

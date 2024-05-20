@@ -7,8 +7,30 @@ document.getElementById('contacto-form').addEventListener('submit', function(eve
     const mensaje = document.getElementById('mensaje').value;
 
     if (!nombre || !email || !asunto || !mensaje) {
-        alert('Por favor, complete todos los campos obligatorios.');
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Por favor, complete todos los campos obligatorios.'
+        });;
     } else {
-        alert('Mensaje enviado correctamente. ¡Gracias por contactarnos!');
+        Swal.fire({
+            icon: 'success',
+            title: '¡Éxito!',
+            text: 'Mensaje enviado correctamente. ¡Gracias por contactarnos!'
+        });
     }
+});
+
+btnEnviar.disabled = true;
+
+document.addEventListener("DOMContentLoaded", function () {
+    const evniarForm = document.getElementById('btnEnviar');
+    const requerimientos = document.querySelectorAll('#contacto-form [required]');
+
+    function checkrequerimientos() {
+        evniarForm.disabled = [...requerimientos].some(campo => !campo.value.trim());
+    }
+
+    checkrequerimientos();
+    requerimientos.forEach(campo => campo.addEventListener('input', checkrequerimientos));
 });

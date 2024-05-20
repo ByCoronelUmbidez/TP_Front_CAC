@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav>
-            <div id="contacto-form">
+            <div class="nav-inicio">
                 <a href="../index.html"><img class="inicio-icono" src="../imagenes/simbolo-de-la-medicina.png" alt="Logo"></a>
             </div>
             <div class="nav-lista">
@@ -42,14 +42,14 @@
     <div class="contenedor-formulario">
         <h1>Contacto</h1>
         <p>Por favor, complete el siguiente formulario para ponerse en contacto con nosotros.</p>
-        <form class="formulario-contacto">
+        <form id="contacto-form">
             <div class="form-nombre">
                 <label for="nombre">Nombre</label>
                 <input type="text" class="input-nombre" id="nombre" name="nombre" required>
             </div>
             <div class="form-email">
                 <label for="email">Correo Electrónico</label>
-                <input type="email" class="input-email" id="email" name="email" required>
+                <input type="email" class="input-email" id="email" name="email" autocomplete="on" required>
             </div>
             <div class="form-motivo">
                 <label for="motivo">Motivo del Contacto</label>
@@ -92,5 +92,6 @@
         <br>
         <p>© 2024 Turnos Médicos. Todos los derechos reservados.</p>
     </footer>
+    <script src="../Js/contacto.js"></script>
 </body>
 </html>

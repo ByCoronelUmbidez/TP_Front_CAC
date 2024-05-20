@@ -202,8 +202,7 @@ nav {
 }
 
 
-/* Style for the container */
-.container {
+.contenedor-turno {
     width: 90%;
     margin: 0 auto;
     padding: 20px;
@@ -212,14 +211,12 @@ nav {
     background-color: rgb(114, 207, 203);
 }
 
-/* Style for the headings */
 h1,
 h2 {
     font-family: Arial, sans-serif;
     color: #333;
-}
+} 
 
-/* Style for form labels */
 label {
     font-weight: bold;
     color: aliceblue;
@@ -240,7 +237,6 @@ textarea {
     /* Ensure background is white */
 }
 
-/* Style for select dropdown */
 select {
     width: 100%;
     padding: 10px;
@@ -249,7 +245,6 @@ select {
     border-radius: 5px;
     box-sizing: border-box;
     background-color: #fff;
-    /* Ensure background is white */
 }
 
 /* Style for checkbox */
@@ -257,30 +252,26 @@ input[type="checkbox"] {
     margin-right: 5px;
 }
 
-/* Style for submit button */
-.btn-primary {
+.btn-enviar {
     display: block;
     width: 100%;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: rgb(90, 173, 173);
+    background-color: rgb(0, 119, 255);
     color: aliceblue;
     font-size: 16px;
     cursor: pointer;
 }
 
-/* Style for checkbox label */
-.form-check-label {
+.check-label {
     font-weight: normal;
     color: aliceblue;
 }
 
 
-/* Estilos de .inicio aplicados al formulario de búsqueda */
-.container {
+.contenedor-formulario {
     width: 100%;
-    /* Asegura que el contenedor ocupe todo el ancho disponible */
     border: 2px solid black;
     padding: 1%;
     margin: 1%;
@@ -288,19 +279,19 @@ input[type="checkbox"] {
     background-color: lightseagreen;
 }
 
-.search-form h2 {
+.form-buscador h2 {
     text-align: center;
     margin-bottom: 10px;
 }
 
-.search-form label {
+.form-buscador label {
     display: block;
     margin-bottom: 5px;
 }
 
-.search-form select,
-.search-form input[type="text"],
-.search-form input[type="date"] {
+.form-buscador select,
+.form-buscador input[type="text"],
+.form-buscador input[type="datetime-local"] {
     background-color: lightcyan;
     width: 100%;
     padding: 8px;
@@ -310,7 +301,7 @@ input[type="checkbox"] {
     box-sizing: border-box;
 }
 
-.search-form button {
+.form-buscador button {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
@@ -321,10 +312,15 @@ input[type="checkbox"] {
     font-size: 16px;
 }
 
-.search-form button:hover {
+.form-buscador button:hover {
     background-color: rgba(0, 0, 0, 1);
 }
 
+#submitBtn[disabled] {
+    background-color: #ccc; /* Color de fondo gris claro */
+    color: #888; /* Color de texto gris más claro */
+    cursor: not-allowed; /* Cursor no disponible */
+}
 
 ul {
     list-style-type: none;
@@ -385,3 +381,23 @@ tbody {
     border-bottom: 1px solid #ddd;
 }
 
+
+/* Estilos personalizados para SweetAlert */
+.swal2-popup {
+    font-size: 16px;
+}
+
+.swal2-title {
+    color: #333;
+    font-size: 24px;
+}
+
+.swal2-content {
+    color: #666;
+    font-size: 18px;
+}
+
+.swal2-confirm {
+    background-color: #3085d6;
+    color: #fff;
+}

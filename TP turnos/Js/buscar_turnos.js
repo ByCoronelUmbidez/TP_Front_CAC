@@ -147,7 +147,6 @@ fechaSelect.addEventListener('change', verificarSeleccionHorario);
 submitBtn.disabled = true;
 
 function seleccionarTurno(turnoSeleccionado) {
-    // Muestra un SweetAlert para informar al usuario sobre el turno agendado y el correo enviado
     Swal.fire({
         title: '¡Turno Agendado!',
         text: `Se ha agendado exitosamente su turno para ${turnoSeleccionado}. Se ha enviado un correo electrónico con la confirmación.`,

@@ -34,6 +34,11 @@ nav {
     border-radius: 5px;
     background-color: rgb(114, 207, 203);
 }
+
+nav {
+    display: flex;
+}
+
 .nav-inicio{
     display: flex;
     justify-content: start;
@@ -53,9 +58,9 @@ nav {
 }
 
 .nav-item {
-    margin: 10px;
+    margin: 0 5px; /* Margen a los lados de cada elemento */
     list-style: none;
-
+    font-size: 16px;
 }
 
 .nav-enlace {
@@ -81,9 +86,9 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 10px; 
+    flex-wrap: wrap; /* */
+    margin: 20px 0; /* */
 }
-
-
 
 iframe {
     border: 0;
@@ -114,20 +119,28 @@ iframe {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 40px;
+    margin: 40px auto; /* auto */
     margin-top: 10px;
-    display: inline-block;
+    /* display: inline-block; */
     border: 2px solid rgb(255, 255, 255);
     background-color: #ffffff83;
+    width: 90%; /* Asegura que el contenedor ocupe todo el ancho */
+    max-width: 1200px; /* Máximo ancho del contenedor */
+    box-sizing: border-box; /* Incluye el padding y borde en el ancho total */
+    padding: 10px; /* Añade padding para espaciar el contenido del borde */
 }
 
 .contenedor-img-contacto img {
-    border: #000000;
-    width: 450px;
-    height: 220px;
-    margin: 10px;
+    border: 2px; /* Añadir borde visible para las imágenes */
+    height: auto;
+    /* margin: 10px;
     margin-left:10px ;
     margin-right:10px ;
+    max-width: 100%; */
+    width: calc(50% - 24px); /* Ajusta el ancho de las imágenes */
+    margin: 10px;
+    max-width: 100%; /* Asegura que las imágenes no se desborden del contenedor */
+    box-sizing: border-box; /* Incluye el padding y borde en el ancho total */
 }
 
 .contactanos-h2{
@@ -528,6 +541,7 @@ tbody {
     margin-bottom: 10%;     
 }
 
+/* hasta acá las cards */
 
 .contenedor-formulario {
     width: 90%;
@@ -583,4 +597,50 @@ tbody {
     background-color: #ccc; /* Color de fondo gris claro */
     color: #888; /* Color de texto gris más claro */
     cursor: not-allowed; /* Cursor no disponible */
+}
+
+/* Desde acá las medias querys*/
+
+/* Estilos para dispositivos móviles (menores de 600px) */
+@media screen and (max-width: 599px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+    .contenedor-img-contacto {
+        flex-direction: column; /* Coloca las imágenes en columna */
+    }
+
+    .contenedor-img-contacto img {
+        width: 100%; /* Asegura que las imágenes ocupen todo el ancho disponible en dispositivos móviles */
+        margin: 10px 0; /* Ajusta el margen para móviles */
+    }
+
+    .nav-lista {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-item {
+        font-size: 14px; /* Tamaño de la letra más pequeño para pantallas de celulares */
+        
+    }
+}
+
+/* Estilos para tabletas (600px a 1199px) */
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+    .card {
+        max-width: 45%;
+    }
+}
+
+/* Estilos para escritorio (1200px y mayores) */
+@media screen and (min-width: 1200px) {
+    .card {
+        max-width: 30%;
+    }
 }

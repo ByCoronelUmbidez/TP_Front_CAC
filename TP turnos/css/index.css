@@ -612,12 +612,12 @@ tbody {
         max-width: 100%;
     }
     .contenedor-img-contacto {
-        flex-direction: column; /* Coloca las imágenes en columna */
+        flex-direction: column; 
     }
 
     .contenedor-img-contacto img {
-        width: 100%; /* Asegura que las imágenes ocupen todo el ancho disponible en dispositivos móviles */
-        margin: 10px 0; /* Ajusta el margen para móviles */
+        width: 100%; 
+        margin: 10px 0;
     }
 
     .nav-lista {
@@ -626,12 +626,12 @@ tbody {
     }
 
     .nav-item {
-        font-size: 14px; /* Tamaño de la letra más pequeño para pantallas de celulares */
+        font-size: 14px; 
         
     }
 }
 
-/* Estilos para tabletas (600px a 1199px) */
+/* Estilos para tablets (600px a 1199px) */
 @media screen and (min-width: 600px) and (max-width: 1199px) {
     .card {
         max-width: 45%;

@@ -34,11 +34,6 @@ nav {
     border-radius: 5px;
     background-color: rgb(114, 207, 203);
 }
-
-nav {
-    display: flex;
-}
-
 .nav-inicio{
     display: flex;
     justify-content: start;
@@ -58,9 +53,9 @@ nav {
 }
 
 .nav-item {
-    margin: 0 5px; /* Margen a los lados de cada elemento */
+    margin: 10px;
     list-style: none;
-    font-size: 16px;
+
 }
 
 .nav-enlace {
@@ -81,20 +76,20 @@ footer {
     padding: 10px 0;
 }
 
-.contenedor-iframes {
+.contenedor_2 {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 10px; 
-    flex-wrap: wrap; /* */
-    margin: 20px 0; /* */
+    margin-top: 20px;
 }
 
 iframe {
     border: 0;
-    width: 500px;
-    height: 250px;
-    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 600px;
+    /* Adjust max-width as needed */
+    height: 350px;
+    /* Adjust height as needed */
 }
 
 .bienvenida-contacto{
@@ -119,28 +114,20 @@ iframe {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 40px auto; /* auto */
+    margin: 40px;
     margin-top: 10px;
-    /* display: inline-block; */
+    display: inline-block;
     border: 2px solid rgb(255, 255, 255);
     background-color: #ffffff83;
-    width: 90%; /* Asegura que el contenedor ocupe todo el ancho */
-    max-width: 1200px; /* Máximo ancho del contenedor */
-    box-sizing: border-box; /* Incluye el padding y borde en el ancho total */
-    padding: 10px; /* Añade padding para espaciar el contenido del borde */
 }
 
 .contenedor-img-contacto img {
-    border: 2px; /* Añadir borde visible para las imágenes */
-    height: auto;
-    /* margin: 10px;
+    border: #000000;
+    width: 450px;
+    height: 220px;
+    margin: 10px;
     margin-left:10px ;
     margin-right:10px ;
-    max-width: 100%; */
-    width: calc(50% - 24px); /* Ajusta el ancho de las imágenes */
-    margin: 10px;
-    max-width: 100%; /* Asegura que las imágenes no se desborden del contenedor */
-    box-sizing: border-box; /* Incluye el padding y borde en el ancho total */
 }
 
 .contactanos-h2{
@@ -178,6 +165,7 @@ h4 {
     text-align: left;
     margin: 10px;
     border-radius: 10px;
+    padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -233,7 +221,11 @@ h4 {
     height: 40px;
 }
 
-
+.iframe-enlace{
+    text-decoration: none;
+    color: white;
+    font-size: medium;
+    margin-bottom: 10px;}
 
 nav {
     display: flex;
@@ -541,7 +533,6 @@ tbody {
     margin-bottom: 10%;     
 }
 
-/* hasta acá las cards */
 
 .contenedor-formulario {
     width: 90%;
@@ -598,49 +589,45 @@ tbody {
     color: #888; /* Color de texto gris más claro */
     cursor: not-allowed; /* Cursor no disponible */
 }
-
-/* Desde acá las medias querys*/
-
-/* Estilos para dispositivos móviles (menores de 600px) */
-@media screen and (max-width: 599px) {
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        max-width: 100%;
-    }
-    .contenedor-img-contacto {
-        flex-direction: column; 
-    }
-
-    .contenedor-img-contacto img {
-        width: 100%; 
-        margin: 10px 0;
-    }
-
-    .nav-lista {
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .nav-item {
-        font-size: 14px; 
-        
-    }
+/* Agrego código grid */
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .footer{
+    padding:10px;
+    border-radius:15px;
+    display:grid;
 }
 
-/* Estilos para tablets (600px a 1199px) */
-@media screen and (min-width: 600px) and (max-width: 1199px) {
-    .card {
-        max-width: 45%;
-    }
+.contenedor{
+    width: 100%;
+    max-width: 1300px;
+    align-content: center;
+    align-items: center;
+    display: grid;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    border-radius:15px;
+    grid-template-areas: "header header header"
+                        "contenido contenido contenido"
+                        "footer footer footer";
+    grid-template-columns: repeat (3, 1fr);
+    grid-template-rows: repeat (3, auto);   
 }
-
-/* Estilos para escritorio (1200px y mayores) */
-@media screen and (min-width: 1200px) {
-    .card {
-        max-width: 30%;
-    }
+.contenedor .header{
+    display:grid;
+    grid-area: header;
+    width: 100%;
+}
+.contenedor .contenido{
+    display:grid;
+    grid-area: contenido;
+    width:100%;
+    border: 10px;
+    max-width: 1300px;
+}
+.contenedor .footer{
+    display:grid;
+    grid-area: footer;
+    width:100%;
 }

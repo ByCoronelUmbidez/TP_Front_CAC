@@ -3,7 +3,7 @@
 * {
     box-sizing: border-box;
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Actualizado para usar Open Sans */
     margin: 0;
     padding: 0;
 }
@@ -65,7 +65,7 @@ nav {
 
 .nav-enlace {
     text-decoration: none;
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif; /* Asegúrate de usar Open Sans */
     color: #333;
 }
 
@@ -121,7 +121,6 @@ iframe {
     flex-wrap: wrap;
     margin: 40px auto; /* auto */
     margin-top: 10px;
-    /* display: inline-block; */
     border: 2px solid rgb(255, 255, 255);
     background-color: #ffffff83;
     width: 90%; /* Asegura que el contenedor ocupe todo el ancho */
@@ -133,10 +132,6 @@ iframe {
 .contenedor-img-contacto img {
     border: 2px; /* Añadir borde visible para las imágenes */
     height: auto;
-    /* margin: 10px;
-    margin-left:10px ;
-    margin-right:10px ;
-    max-width: 100%; */
     width: calc(50% - 24px); /* Ajusta el ancho de las imágenes */
     margin: 10px;
     max-width: 100%; /* Asegura que las imágenes no se desborden del contenedor */
@@ -233,24 +228,16 @@ h4 {
     height: 40px;
 }
 
-
-
-nav {
-    display: flex;
-}
-
 .nav-lista {
     display: flex;
     align-items: center;
 }
-
 
 #contacto-div {
     display: flex;
     justify-content: start;
     align-items: center;
 }
-
 
 .inicio-icono {
     width: 60px;
@@ -263,7 +250,6 @@ nav {
     align-items: center;
 }
 
-
 .contenedor-turno {
     border: 0.5px solid lightcyan;
     padding: 1%;
@@ -274,7 +260,7 @@ nav {
 
 h1,
 h2 {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif; /* Usar Open Sans */
     color: #333;
 } 
 
@@ -319,9 +305,6 @@ input[type="checkbox"] {
     font-weight: normal;
     color: aliceblue;
 }
-
-
-
 
 .form-buscador h2 {
     text-align: center;
@@ -446,11 +429,10 @@ tbody {
     color: #fff;
 }
 
-/* Estilos de las cards del inicio. De acá para abajo modificque, de arriba, solo lineas de nav */
 .bienvenida-index h1{
     color: rgb(0, 0, 0);
     text-shadow: 0.2px 0.5px 0.2px rgb(255, 255, 255);
-
+    
 }  
 
 .bienvenida-index h3{
@@ -458,6 +440,7 @@ tbody {
     text-shadow: 0.2px 0.5px 0.2px rgb(255, 255, 255);
 }  
 
+/* Estilos de las cards del inicio. De acá para abajo modificque, de arriba, solo lineas de nav */
 .cards {
     display: flex;
     justify-content: space-around;

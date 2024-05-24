@@ -141,7 +141,7 @@ iframe {
     margin: 10px;
     border-radius: 10px;
     padding: 10px;
-    color: aliceblue;
+    color: grey;
     text-align: center;
     font-weight: bold;
     text-shadow: 0.5px 0.5px 0.5px rgb(0, 0, 0);
@@ -221,7 +221,6 @@ h4, .link-inicio {
 
 label {
     font-weight: bold;
-    color: aliceblue;
     text-shadow: 0.5px 0.5px 0.5px rgb(0, 0, 0);
 }
 
@@ -240,7 +239,6 @@ input[type="checkbox"] {
 
 .check-label {
     font-weight: normal;
-    color: aliceblue;
 }
 
 .form-buscador h2 {
@@ -483,6 +481,7 @@ tbody {
 .contacto-form label {
     display: block;
     margin-bottom: 5px;
+    color: black;
 }
 
 .form-motivo select,

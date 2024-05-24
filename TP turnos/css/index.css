@@ -644,4 +644,44 @@ tbody {
         max-width: 30%;
     }
 }
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .footer{
+    padding:10px;
+    border-radius:15px;
+    display:grid;
+}
+.contenedor{
+    width: 100%;
+    max-width: 1300px;
+    align-content: center;
+    align-items: center;
+    display: grid;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    border-radius:15px;
+    grid-template-areas: "header header header"
+                        "contenido contenido contenido"
+                        "footer footer footer";
+    grid-template-columns: repeat (3, 1fr);
+    grid-template-rows: repeat (3, auto);   
 
+}
+.contenedor .header{
+    display:grid;
+    grid-area: header;
+    width: 100%;
+}
+.contenedor .contenido{
+    display:grid;
+    grid-area: contenido;
+    width:100%;
+    border: 10px;
+    max-width: 1300px;
+}
+.contenedor .footer{
+    display:grid;
+    grid-area: footer;
+    width:100%;
+}

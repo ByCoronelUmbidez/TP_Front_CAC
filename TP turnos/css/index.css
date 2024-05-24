@@ -15,19 +15,7 @@ body {
     flex-direction: column;
 }
 
-header nav {
-    background-color: rgb(236, 255, 255);
-    text-emphasis-color: black;
-    border: 2px solid black;
-    padding: 1%;
-    margin: 1%;
-    border-radius: 5px;
-    border-color: rgb(0, 0, 0);
-}
-
-header,
-main,
-nav {
+header, main, nav {
     border: 0.5px solid lightcyan;
     padding: 1%;
     margin: 1%;
@@ -35,37 +23,39 @@ nav {
     background-color: rgb(114, 207, 203);
 }
 
+header nav {
+    background-color: rgb(236, 255, 255);
+    text-emphasis-color: black;
+    border: 2px solid black;
+    border-color: rgb(0, 0, 0);
+}
+
 nav {
     display: flex;
 }
 
-.nav-inicio{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-.nav-lista {
+.nav-inicio, .nav-lista, .nav-ul {
     display: flex;
     align-items: center;
-    justify-content: center; /* agregué para que queden centrados en la barra de nav*/
-    flex: 2;/* agregué para que queden centrados en la barra de nav*/
+    justify-content: center;
 }
 
-.nav-ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nav-inicio {
+    justify-content: start;
+}
+
+.nav-lista {
+    flex: 2; 
 }
 
 .nav-item {
-    margin: 0 5px; /* Margen a los lados de cada elemento */
+    margin: 0 5px; 
     list-style: none;
     font-size: 16px;
 }
 
 .nav-enlace {
     text-decoration: none;
-    font-family: 'Open Sans', Arial, sans-serif; /* Asegúrate de usar Open Sans */
     color: #333;
 }
 
@@ -86,8 +76,8 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 10px; 
-    flex-wrap: wrap; /* */
-    margin: 20px 0; /* */
+    flex-wrap: wrap; 
+    margin: 20px 0; 
 }
 
 iframe {
@@ -104,45 +94,47 @@ iframe {
     border-radius: 10px;
     padding: 10px;
 }
-.bienvenida-contacto h1{
+
+.bienvenida-contacto h1, .bienvenida-index h1 {
     color: rgb(0, 0, 0);
     text-shadow: 0.2px 0.5px 0.2px rgb(255, 255, 255);
-
 }
-.bienvenida-contacto h2{
+
+.bienvenida-contacto h2, .bienvenida-index h3 {
     color: rgb(255, 255, 255);
     text-shadow: 0.2px 0.5px 0.2px rgb(0, 0, 0);
 }
-
 
 .contenedor-img-contacto {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 40px auto; /* auto */
+    margin: 40px auto; 
     margin-top: 10px;
     border: 2px solid rgb(255, 255, 255);
     background-color: #ffffff83;
-    width: 90%; /* Asegura que el contenedor ocupe todo el ancho */
-    max-width: 1200px; /* Máximo ancho del contenedor */
-    box-sizing: border-box; /* Incluye el padding y borde en el ancho total */
-    padding: 10px; /* Añade padding para espaciar el contenido del borde */
+    width: 90%; 
+    max-width: 1200px; 
+    padding: 10px; 
 }
 
 .contenedor-img-contacto img {
-    border: 2px; /* Añadir borde visible para las imágenes */
+    border: 2px; 
     height: auto;
-    width: calc(50% - 24px); /* Ajusta el ancho de las imágenes */
+    width: calc(50% - 24px); 
     margin: 10px;
-    max-width: 100%; /* Asegura que las imágenes no se desborden del contenedor */
-    box-sizing: border-box; /* Incluye el padding y borde en el ancho total */
+    max-width: 100%; 
+    box-sizing: border-box; 
 }
 
-.contactanos-h2{
+.contactanos-h2, h1, h2 {
     margin-bottom: 10px;
-    font-size:xx-large;
+    font-size: xx-large;
     text-shadow: 1px 1px 1px rgb(255, 255, 255);
+    color: #333;
+    font-family: 'Open Sans', Arial, sans-serif; /* Usar Open Sans */
 }
+
 .main-contacto h3 {
     border: 0.5px solid lightcyan;
     background-color: rgb(170, 228, 225);
@@ -168,7 +160,7 @@ iframe {
     box-shadow: 3px 3px 5px black;
 }
 
-h4 {
+h4, .link-inicio {
     color: rgb(35, 44, 41);
     text-align: left;
     margin: 10px;
@@ -176,35 +168,15 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.link-inicio {
-    color: rgb(35, 44, 41);
-    text-align: left;
-    border-radius: 10px;
     list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: aliceblue;
     background-color: rgb(90, 173, 173);
     text-align: center;
-    margin: 10px;
     font-weight: bold;
-    border-radius: 10px;
     padding: 15px;
 }
 
-.listado-inicio {
-    color: rgb(35, 44, 41);
-    text-align: left;
-    border-radius: 10px;
-    list-style: none;
-}
-
 .link-inicio {
-    text-decoration: none;
-    color: white;
+    color: aliceblue;
 }
 
 .link-inicio:hover {
@@ -228,11 +200,6 @@ h4 {
     height: 40px;
 }
 
-.nav-lista {
-    display: flex;
-    align-items: center;
-}
-
 #contacto-div {
     display: flex;
     justify-content: start;
@@ -244,12 +211,6 @@ h4 {
     height: 60px;
 }
 
-.buscador {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .contenedor-turno {
     border: 0.5px solid lightcyan;
     padding: 1%;
@@ -258,48 +219,24 @@ h4 {
     background-color: rgb(114, 207, 203);
 }
 
-h1,
-h2 {
-    font-family: 'Open Sans', Arial, sans-serif; /* Usar Open Sans */
-    color: #333;
-} 
-
 label {
     font-weight: bold;
     color: aliceblue;
     text-shadow: 0.5px 0.5px 0.5px rgb(0, 0, 0);
 }
 
-/* Style for form inputs and text area */
-input[type="text"],
-input[type="email"],
-textarea {
+input[type="text"], input[type="email"], textarea, select {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;
-    /* Ensure padding and border are included in width */
-    background-color: #fff;
-    /* Ensure background is white */
-}
-
-select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
     background-color: #fff;
 }
 
-/* Style for checkbox */
 input[type="checkbox"] {
     margin-right: 5px;
 }
-
 
 .check-label {
     font-weight: normal;
@@ -361,9 +298,12 @@ a {
     text-decoration: solid;
 }
 
+/* Listados */
+
 table {
-    width: 100%;
+    width: calc(100% - 2%);
     margin: 1%;
+    table-layout: fixed; 
 }
 
 thead {
@@ -373,41 +313,41 @@ thead {
     color: white;
 }
 
-button,
-#boton {
+button, #boton {
     border-collapse: separate;
     background-color: #2f424e;
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: calc(100% - 2%);
+    margin: 1%; 
 }
 
-th,
-tr {
+th, tr, td {
     padding: 8px;
     text-align: center;
     border-bottom: 1px solid #ddd;
 }
-
 
 td {
-    padding: 8px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
     box-sizing: border-box;
 }
 
 tbody {
     background-color: #f9f9f9;
-    box-sizing: content-box;
+    box-sizing: content-box;    
+    border-radius: 5px;
 }
 
-#tabla-profesionales td,
-#tabla-sedes td {
+#tabla-profesionales td, #tabla-sedes td {
     width: calc(100% / 3);
     padding: 8px;
     text-align: center;
     border-bottom: 1px solid #ddd;
+    
 }
-
 
 /* Estilos personalizados para SweetAlert */
 .swal2-popup {
@@ -440,7 +380,7 @@ tbody {
     text-shadow: 0.2px 0.5px 0.2px rgb(255, 255, 255);
 }  
 
-/* Estilos de las cards del inicio. De acá para abajo modificque, de arriba, solo lineas de nav */
+/* Estilos de las cards del inicio */
 .cards {
     display: flex;
     justify-content: space-around;
@@ -577,14 +517,14 @@ tbody {
 
 
 #btnEnviar[disabled] {
-    background-color: #ccc; /* Color de fondo gris claro */
-    color: #888; /* Color de texto gris más claro */
-    cursor: not-allowed; /* Cursor no disponible */
+    background-color: #ccc; 
+    color: #888; 
+    cursor: not-allowed; 
 }
 
 /* Desde acá las medias querys*/
 
-/* Estilos para dispositivos móviles (menores de 600px) */
+/* Estilos para celulares (menores de 600px) */
 @media screen and (max-width: 599px) {
     .cards {
         flex-direction: column;

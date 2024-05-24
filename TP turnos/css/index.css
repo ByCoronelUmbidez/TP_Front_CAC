@@ -677,8 +677,6 @@ tbody {
     display:grid;
     grid-area: contenido;
     width:100%;
-    border: 10px;
-    max-width: 1300px;
 }
 .contenedor .footer{
     display:grid;

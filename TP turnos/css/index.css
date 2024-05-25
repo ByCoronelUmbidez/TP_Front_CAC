@@ -597,26 +597,25 @@ tbody {
     flex-wrap: wrap;
     border-radius:15px;
     grid-template-areas: "header header header"
-                        "contenido contenido contenido"
+                        "desarrollo desarrollo desarrollo"
                         "footer footer footer";
     grid-template-columns: repeat (3, 1fr);
     grid-template-rows: repeat (3, auto);   
 
 }
-.contenedor .header{
+.contenedor header{
     display:grid;
     grid-area: header;
     width: 100%;
 }
-.contenedor .contenido{
+.contenedor .desarrollo{
     display:grid;
-    grid-area: contenido;
+    grid-area: desarrollo;
     width:100%;
     align-content: center;
 }
-.contenedor .footer{
+.contenedor footer{
     display:grid;
     grid-area: footer;
     width:100%;
 }
-

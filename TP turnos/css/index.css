@@ -311,18 +311,6 @@ thead {
     color: white;
 }
 
-button, #boton {
-    border-collapse: separate;
-    background-color: #2f424e;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: calc(100% - 2%);
-    margin: 1%; 
-}
-
 th, tr, td {
     padding: 8px;
     text-align: center;
@@ -460,6 +448,29 @@ tbody {
     margin: 0 auto 10px; 
     font-size: 2rem; 
     margin-bottom: 10%;     
+}
+
+.boton {
+    display: inline-block;
+    background-color: #2f424e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none; /* Para quitar el subrayado del enlace */
+    width: calc(100% - 2%);
+    margin: 1%;
+    
+}
+
+.boton .link-inicio a{
+    text-decoration: none;
+}
+
+.boton:hover {
+    background-color: #1c2934; /* Color de fondo al pasar el ratón */
 }
 
 /* hasta acá las cards */

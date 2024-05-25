@@ -590,7 +590,6 @@ tbody {
 }
 .contenedor{
     width: 100%;
-    max-width: 1300px;
     align-items: center;
     display: grid;
     column-gap: 20px;

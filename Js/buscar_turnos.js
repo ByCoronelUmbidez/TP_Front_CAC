@@ -87,7 +87,7 @@ const data = {
 
 const especialidadSelect = document.getElementById('especialidad');
 const sedeSelect = document.getElementById('sede');
-const fechaSelect = document.getElementById('horario');
+const fechaSelect = document.getElementById('fecha');
 const submitBtn = document.getElementById('submitBtn');
 
 function actualizarHorariosDisponibles() {

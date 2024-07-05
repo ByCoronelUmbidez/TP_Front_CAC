@@ -1,149 +1,142 @@
-const data = {
-    profesionales: [
-        { 
-            nombre: "Dr. Juan Pérez",
-            especialidad: "Cardiología",
-            dia: ["Lunes","Miércoles"],
-            horario: ["9:00","10:00","11:00","12:00"],
-            sede: "Sede Central"
-        },
-        { 
-            nombre: "Dra. María García",
-            especialidad: "Odontología",
-            dia: ["Martes","Jueves"],
-            horario: ["10:00","11:00","12:00","13:00","14:00"],
-            sede: "Sucursal Norte"
-        },
-        { 
-            nombre: "Dr. Roberto Martínez",
-            especialidad: "Pediatría",
-            dia: ["Lunes","Viernes"],
-            horario: ["8:00","9:00","10:00","11:00","12:00","13:00"],
-            sede: "Sede Central"
-        },
-        { 
-            nombre: "Dra. Laura Rodríguez",
-            especialidad: "Dermatología",
-            dia: ["Miercoles","Viernes"],
-            horario: ["14:00","15:00","16:00","17:00","18:00"],
-            sede: "Sucursal Norte"
-        },
-        { 
-            nombre: "Dr. Carlos Sánchez",
-            especialidad: "Ginecología",
-            dia: ["Martes","Jueves"],
-            horario: ["8:00","9:00","10:00","11:00","12:00"],
-            sede: "Sede Central"
-        },
-        { 
-            nombre: "Dra. Ana López",
-            especialidad: "Oftalmología",
-            dia: ["Lunes","Miércoles"],
-            horario: ["10:00","11:00","12:00","13:00","14:00","15:00"],
-            sede: "Sucursal Norte"
-        },
-        { 
-            nombre: "Dr. Manuel González",
-            especialidad: "Ortopedia",
-            dia: ["Martes","Jueves"],
-            horario: ["9:00","10:00","11:00","12:00","13:00"],
-            sede: "Sede Central"
-        },
-        { 
-            nombre: "Dra. Marta Díaz",
-            especialidad: "Psicología",
-            dia: ["Miercoles","Viernes"],
-            horario:["10:00","11:00","12:00","13:00","14:00","15:00","16:00"],
-            sede: "Sucursal Norte"
-        },
-        { 
-            nombre: "Dr. Javier Ruiz",
-            especialidad: "Urología",
-            dia: ["Lunes","Jueves"],
-            horario: ["8:00","9:00","10:00","11:00","12:00"],
-            sede: "Sede Central"
-        },
-        { 
-            nombre: "Dra. Patricia Fernández",
-            especialidad: "Endocrinología",
-            dia: ["Martes","Viernes"],
-            horario: ["9:00","10:00","11:00","12:00","13:00","14:00"],
-            sede: "Sucursal Norte"
-        }
-    ],
-    sedees: [
-        {
-            sede: "Sede Central",
-            direccion: "Calle Principal 123",
-            telefono: "(123) 456-7890"
-        },
-        {
-            sede: "Sucursal Norte",
-            direccion: "Avenida Norte 456",
-            telefono: "(987) 654-3210"
-        }
-    ]
-};
+document.addEventListener('DOMContentLoaded', function() {
+    const especialidadSelect = document.getElementById('especialidad');
+    const profesionalSelect = document.getElementById('profesional');
+    const horarioSelect = document.getElementById('horario');
+    const sedeSelect = document.getElementById('sede');
+    const idProfesionalInput = document.getElementById('id_profesional');
+    const idSedeInput = document.getElementById('id_sede');
+    const idUsuarioInput = document.getElementById('id_usuario');
+    const form = document.getElementById('formularioTurnos');
 
-const especialidadSelect = document.getElementById('especialidad');
-const sedeSelect = document.getElementById('sede');
-const fechaSelect = document.getElementById('fecha');
-const submitBtn = document.getElementById('submitBtn');
-
-function actualizarHorariosDisponibles() {
-    const especialidadSeleccionada = especialidadSelect.value;
-    const sedeSeleccionada = sedeSelect.value;
-
-    const horariosDisponibles = data.profesionales.reduce((acc, profesional) => {
-        if (profesional.especialidad === especialidadSeleccionada && profesional.sede === sedeSeleccionada) {
-            profesional.dia.forEach(dia => {
-                profesional.horario.forEach(horario => {
-                    acc.push(`${dia} ${horario} - ${profesional.nombre}`);
-                });
-            });
-        }
-        return acc;
-    }, []);
-
-    fechaSelect.innerHTML = '<option value="" disabled selected>Seleccione un horario</option>';
-    if (horariosDisponibles.length > 0) {
-        horariosDisponibles.forEach(horario => fechaSelect.add(new Option(horario)));
-        fechaSelect.disabled = false;
-    } else {
-        fechaSelect.add(new Option('No hay médicos disponibles'));
-        fechaSelect.disabled = true;
-    }
-}
-
-function verificarSeleccionHorario() {
-    submitBtn.disabled = fechaSelect.value === 'No hay médicos disponibles' || fechaSelect.value === '';
-}
-
-especialidadSelect.addEventListener('change', actualizarHorariosDisponibles);
-sedeSelect.addEventListener('change', actualizarHorariosDisponibles);
-fechaSelect.addEventListener('change', verificarSeleccionHorario);
-
-submitBtn.disabled = true;
-
-submitBtn.addEventListener('click', function(event) {
-    event.preventDefault();
-    const fechaSeleccionada = fechaSelect.value;
-    if (fechaSeleccionada && fechaSeleccionada !== 'No hay médicos disponibles') {
-        seleccionarTurno(fechaSeleccionada);
-    }
-});
-
-function seleccionarTurno(turnoSeleccionado) {
-    Swal.fire({
-        title: '¡Turno Agendado!',
-        text: `Se ha agendado exitosamente su turno para ${turnoSeleccionado}. Se ha enviado un correo electrónico con la confirmación.`,
-        icon: 'success',
-        confirmButtonText: 'Aceptar',
-        customClass: {
-            popup: 'my-swal-popup',
-            title: 'my-swal-title',
-            content: 'my-swal-content',
-            confirmButton: 'my-swal-confirm'
+    especialidadSelect.addEventListener('change', function() {
+        const selectedEspecialidad = especialidadSelect.value;
+        console.log('Especialidad seleccionada:', selectedEspecialidad); // Verificar el valor seleccionado
+        
+        if (selectedEspecialidad) {
+            cargarProfesionales(selectedEspecialidad);
+            profesionalSelect.disabled = false;
+            horarioSelect.disabled = true; // Deshabilitar horario hasta que se seleccione un profesional
+        } else {
+            profesionalSelect.disabled = true;
+            horarioSelect.disabled = true;
         }
     });
-}
+    
+    profesionalSelect.addEventListener('change', function() {
+        const selectedProfesional = profesionalSelect.value;
+        const selectedEspecialidad = especialidadSelect.value; // Asegurarse de tener selectedEspecialidad definida aquí
+        console.log('Profesional seleccionado:', selectedProfesional); // Verificar el valor seleccionado
+        
+        if (selectedProfesional) {
+            cargarHorarios(selectedEspecialidad); // Pasar selectedEspecialidad al cargar los horarios
+            horarioSelect.disabled = false;
+        } else {
+            horarioSelect.disabled = true;
+        }
+    });
+    
+    function cargarEspecialidades() {
+        fetch('http://127.0.0.1:5000/api/especialidades')
+            .then(response => response.json())
+            .then(data => {
+                especialidadSelect.innerHTML = '<option value="">Selecciona una especialidad</option>'; // Limpiar select de especialidades
+                data.forEach(especialidad => {
+                    const option = document.createElement('option');
+                    option.textContent = especialidad;
+                    option.value = especialidad;
+                    especialidadSelect.appendChild(option);
+                });
+                especialidadSelect.disabled = false;
+            })
+            .catch(error => console.error('Error al cargar especialidades:', error));
+    }
+    
+    function cargarProfesionales(especialidad) {
+        fetch(`http://127.0.0.1:5000/api/profesionales/${encodeURIComponent(especialidad)}`)
+            .then(response => response.json())
+            .then(data => {
+                profesionalSelect.innerHTML = '<option value="">Selecciona un profesional</option>'; // Limpiar select de profesionales
+                data.forEach(profesional => {
+                    const option = document.createElement('option');
+                    option.textContent = profesional.nombre;
+                    option.value = profesional.id; // Asegúrate de tener el ID del profesional aquí
+                    profesionalSelect.appendChild(option);
+                });
+                if (data.length === 0) {
+                    profesionalSelect.disabled = true; // Deshabilitar si no hay profesionales
+                }
+            })
+            .catch(error => console.error('Error al cargar profesionales:', error));
+    }
+    
+    function cargarHorarios(especialidad) {
+        fetch(`http://127.0.0.1:5000/api/horarios/${encodeURIComponent(especialidad)}`)
+            .then(response => response.json())
+            .then(data => {
+                horarioSelect.innerHTML = '<option value="">Selecciona un horario</option>'; // Limpiar select de horarios
+                data.forEach(horario => {
+                    const option = document.createElement('option');
+                    option.textContent = horario.horario;
+                    option.value = horario.id; // Asegúrate de tener el ID del horario aquí
+                    horarioSelect.appendChild(option);
+                });
+                if (data.length === 0) {
+                    horarioSelect.disabled = true; // Deshabilitar si no hay horarios
+                }
+            })
+            .catch(error => console.error('Error al cargar horarios:', error));
+    }
+
+    function cargarSedes() {
+        fetch('http://127.0.0.1:5000/api/sedes')
+            .then(response => response.json())
+            .then(data => {
+                sedeSelect.innerHTML = '<option value="">Selecciona una sede</option>'; // Limpiar select de sedes
+                data.forEach(sede => {
+                    const option = document.createElement('option');
+                    option.textContent = sede.nombre;
+                    option.value = sede.id; // Asegúrate de tener el ID de la sede aquí
+                    sedeSelect.appendChild(option);
+                });
+                sedeSelect.disabled = false;
+            })
+            .catch(error => console.error('Error al cargar sedes:', error));
+    }
+
+    cargarEspecialidades(); // Cargar las especialidades al cargar la página
+    cargarSedes(); // Cargar las sedes al cargar la página
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Evitar que el formulario se envíe normalmente
+
+        const idProfesional = idProfesionalInput.value;
+        const idSede = idSedeInput.value;
+        const idUsuario = idUsuarioInput.value;
+
+        if (idProfesional && idSede && idUsuario) {
+            // Aquí puedes enviar los datos al servidor para guardar el turno
+            guardarTurno(idProfesional, idSede, idUsuario);
+        } else {
+            console.error('Faltan campos por completar.');
+        }
+    });
+
+    function guardarTurno(idProfesional, idSede, idUsuario) {
+        const formData = new FormData();
+        formData.append('id_profesional', idProfesional);
+        formData.append('id_sede', idSede);
+        formData.append('id_usuario', idUsuario);
+
+        fetch('http://127.0.0.1:5000/api/guardar_turno', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Turno guardado:', data);
+            // Aquí puedes manejar la respuesta del servidor si es necesario
+        })
+        .catch(error => console.error('Error al guardar el turno:', error));
+    }
+
+});

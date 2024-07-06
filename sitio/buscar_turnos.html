@@ -7,38 +7,41 @@
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-    <h1>Selecionar Turno</h1>
+    <h1>Seleccionar Turno</h1>
     
-    <form>
+    <form id="formularioTurnos" method="POST" action="/api/guardar_turno">
         <label for="especialidad">Especialidad:</label>
-        <select id="especialidad">
+        <select id="especialidad" name="especialidad">
             <!-- Options will be dynamically added by JavaScript -->
         </select>
         
         <label for="profesional">Profesional:</label>
-        <select id="profesional" disabled>
+        <select id="profesional" name="id_profesional" disabled>
             <option value="">Selecciona un profesional</option>
         </select>
         
         <label for="horario">Horario:</label>
-        <select id="horario" disabled>
+        <select id="horario" name="horario" disabled>
             <option value="">Selecciona un horario</option>
         </select>
         
         <label for="sede">Sede:</label>
-        <select id="sede">
+        <select id="sede" name="id_sede">
             <!-- Options will be dynamically added by JavaScript -->
         </select>
 
-            <!-- Campos ocultos para almacenar IDs -->
-        <input type="hidden" id="id_profesional" name="id_profesional">
-        <input type="hidden" id="id_sede" name="id_sede">
+        <!-- Campos ocultos para almacenar IDs -->
         <input type="hidden" id="id_usuario" name="id_usuario" value="{{ id_usuario }}">
     
-        <button type="submit">Guardar Turnos</button>
-        
+        <button type="submit" id="guardarTurnoButton">Guardar Turno</button>
     </form>
-    
+
+    <a class="link-inicio boton" href="../index.html"> Ir al inicio</a>
+
+    <footer>
+        <p>© 2024 Turnos Médicos. Todos los derechos reservados.</p>
+    </footer>
+
     <script src="../Js/buscar_turnos.js"></script>
 </body>
 </html>

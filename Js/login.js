@@ -12,6 +12,7 @@ loginForm.addEventListener('submit', async function(event) {
             headers: {
                 'Content-Type': 'application/json'
             },
+            credentials: 'include',  // Incluir credenciales en la solicitud
             body: JSON.stringify({ username, password })
         });
 
@@ -23,7 +24,7 @@ loginForm.addEventListener('submit', async function(event) {
         // Aquí puedes manejar la respuesta del backend, por ejemplo, redirigir al usuario a otra página
         console.log('Inicio de sesión exitoso', data);
         // Ejemplo de redirección
-        window.location.href = '../index.html'; // Cambia esto según tu estructura de rutas
+        window.location.href = './perfil_usuario.html'; // Cambia esto según tu estructura de rutas
     } catch (error) {
         console.error('Error:', error.message);
         // Aquí puedes mostrar un mensaje de error al usuario

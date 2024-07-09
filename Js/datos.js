@@ -1,5 +1,5 @@
 // URL de tu API que devuelve datos de profesionales
-const urlProfesionales = 'http://127.0.0.1:5000/api/listar_profesionales';
+const urlProfesionales = 'https://barbycoronelumbidez.pythonanywhere.com/api/listar_profesionales';
 
 // Función para obtener datos de la API
 async function obtenerProfesionales() {
@@ -35,7 +35,7 @@ function mostrarProfesionales(profesionales) {
 
 
 // URL de tu API que devuelve datos de profesionales
-const urlSedes = 'http://127.0.0.1:5000/api/listar_sedes';
+const urlSedes = 'https://barbycoronelumbidez.pythonanywhere.com/api/listar_sedes';
 
 // Función para obtener datos de la API
 async function obtenerSedes() {

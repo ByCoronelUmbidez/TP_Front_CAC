@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function cargarEspecialidades() {
         try {
-            const response = await fetch('http://127.0.0.1:5000/api/especialidades');
+            const response = await fetch('https://barbycoronelumbidez.pythonanywhere.com/api/especialidades');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function cargarProfesionales(especialidad) {
         try {
-            const response = await fetch(`http://127.0.0.1:5000/api/profesionales/${encodeURIComponent(especialidad)}`);
+            const response = await fetch(`https://barbycoronelumbidez.pythonanywhere.com/api/profesionales/${encodeURIComponent(especialidad)}`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function cargarHorarios(profesionalId) {
         try {
-            const response = await fetch(`http://127.0.0.1:5000/api/horarios/${encodeURIComponent(profesionalId)}`);
+            const response = await fetch(`https://barbycoronelumbidez.pythonanywhere.com/api/horarios/${encodeURIComponent(profesionalId)}`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function cargarSedes() {
         try {
-            const response = await fetch('http://127.0.0.1:5000/api/sedes');
+            const response = await fetch('https://barbycoronelumbidez.pythonanywhere.com/api/sedes');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
     
-            const response = await fetch('http://127.0.0.1:5000/api/guardar_turno', {
+            const response = await fetch('https://barbycoronelumbidez.pythonanywhere.com/api/guardar_turno', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Función para obtener el ID de usuario desde la sesión de Flask
     async function obtenerIdUsuario() {
         // Realiza una solicitud al servidor Flask para obtener el ID de usuario actual
-        return fetch('http://127.0.0.1:5000//api/current_user', {
+        return fetch('https://barbycoronelumbidez.pythonanywhere.com/api/current_user', {
             method: 'GET',
             credentials: 'include'
         })

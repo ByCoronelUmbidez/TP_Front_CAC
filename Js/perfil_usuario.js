@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('http://127.0.0.1:5000/api/perfil', {
+    fetch('https://barbycoronelumbidez.pythonanywhere.com/api/perfil', {
         method: 'GET',  // Método de la solicitud (GET, POST, etc.)
         credentials: 'include'  // Incluir credenciales en la solicitud (cookies)
     })
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     cerrarSesionBtn.addEventListener('click', function(event) {
         event.preventDefault();
 
-        fetch('http://127.0.0.1:5000/api/logout', {
+        fetch('https://barbycoronelumbidez.pythonanywhere.com/api/logout', {
             method: 'POST',
             credentials: 'include'
         })

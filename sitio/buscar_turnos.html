@@ -7,35 +7,52 @@
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-    <h1>Seleccionar Turno</h1>
-    
-    <form id="formularioTurnos" method="POST" action="/api/guardar_turno">
-        <label for="especialidad">Especialidad:</label>
-        <select id="especialidad" name="especialidad">
-            <!-- Options will be dynamically added by JavaScript -->
-        </select>
-        
-        <label for="profesional">Profesional:</label>
-        <select id="profesional" name="id_profesional" disabled>
-            <option value="">Selecciona un profesional</option>
-        </select>
-        
-        <label for="horario">Horario:</label>
-        <select id="horario" name="horario" disabled>
-            <option value="">Selecciona un horario</option>
-        </select>
-        
-        <label for="sede">Sede:</label>
-        <select id="sede" name="id_sede">
-            <!-- Options will be dynamically added by JavaScript -->
-        </select>
+    <header>
+        <nav>
+            <div class="nav-inicio">
+                <a href="../index.html"><img class="inicio-icono" src="../img/simbolo-de-la-medicina.png"
+                        alt=""></a>
+            </div>
+            <div class="nav-lista">
+                <ul class="nav-ul">
+                    <li class="nav-item"><a class="nav-enlace" href="./profesionales_sede.html">Médicos</a></li>
+                    <li class="nav-item"><a class="nav-enlace" href="./buscar_turnos.html">Turnos</a></li>
+                    <li class="nav-item"><a class="nav-enlace" href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="contenedor">
+        <div class="formulario-contenedor">
+            <form id="formularioTurnos" method="POST" action="/api/guardar_turno">
+                <label for="especialidad">Especialidad:</label>
+                <select id="especialidad" name="especialidad">
+                    <!-- Options will be dynamically added by JavaScript -->
+                </select>
+                
+                <label for="profesional">Profesional:</label>
+                <select id="profesional" name="id_profesional" disabled>
+                    <option value="">Selecciona un profesional</option>
+                </select>
+                
+                <label for="horario">Horario:</label>
+                <select id="horario" name="horario" disabled>
+                    <option value="">Selecciona un horario</option>
+                </select>
+                
+                <label for="sede">Sede:</label>
+                <select id="sede" name="id_sede">
+                    <!-- Options will be dynamically added by JavaScript -->
+                </select>
 
-        <!-- Campos ocultos para almacenar IDs -->
-        <input type="hidden" id="id_usuario" name="id_usuario" value="">
-    
-        <button type="submit" id="guardarTurnoButton">Guardar Turno</button>
-    </form>
-
+                <!-- Campos ocultos para almacenar IDs -->
+                <input type="hidden" id="id_usuario" name="id_usuario" value="">
+            
+                <button class="link-inicio boton" type="submit" id="guardarTurnoButton">Guardar Turno</button>
+            </form>
+        </div>
+    </div>
+    <a class="link-inicio boton" href="./perfil_usuario.html"> Ir a ver mis turnos</a>
     <a class="link-inicio boton" href="../index.html"> Ir al inicio</a>
 
     <footer>

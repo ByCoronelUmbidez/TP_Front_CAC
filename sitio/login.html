@@ -9,18 +9,35 @@
 </head>
 
 <body>
-    <div class="container">
-        <h2>Iniciar Sesión</h2>
-        <form id="loginForm">
-            <label for="username">Nombre de Usuario:</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit">Iniciar Sesión</button>
-        </form>
-        <p>No tienes una cuenta? <a href="/sitio/registro.html">Regístrate aquí</a></p>
+    <div class="contenedor">
+        <header>
+            <nav>
+                <div class="nav-lista nav-secundaria">
+                    <ul class="nav-ul">
+                        <li class="nav-item"><a class="nav-enlace" href="./login.html">Iniciar Sesión</a></li>
+                        <li class="nav-item"><a class="nav-enlace" href="./perfil_usuario.html">Perfil</a></li>
+                        <li class="nav-item"><a class="nav-enlace" href="./usuarios.html">Usuarios</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="contenedor">
+            <div class="formulario-principal">
+                <form id="loginForm" class="formulario-contenedor">
+                    <h2>Iniciar Sesión</h2>
+                    <label for="username">Nombre de Usuario:</label>
+                    <input type="text" id="username" name="username" required>
+    
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+    
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+                <div class="formulario-contenedor">
+                    <p>¿No tienes una cuenta? <a href="/sitio/registro.html"> Regístrate aquí</a></p>
+                </div>
+            </div>
+        </div>
     </div>
         <a class="link-inicio boton" href="../index.html"> Ir al inicio</a>
     </div>

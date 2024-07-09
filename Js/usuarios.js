@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('http://127.0.0.1:5000/api/listar_usuarios')
+    fetch('http://127.0.0.1:5000//api/listar_usuarios')
         .then(response => response.json())
         .then(data => {
             const tableBody = document.querySelector('#tabla-usuarios');
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <td>${usuario.nombre}</td>
                     <td>${usuario.email}</td>
                     <td>
-                        <form id="eliminarForm${usuario.id}" action="http://127.0.0.1:5000/api/eliminar_usuario/${usuario.id}" method="post">
+                        <form id="eliminarForm${usuario.id}" action="http://127.0.0.1:5000//api/eliminar_usuario/${usuario.id}" method="post">
                             <input type="hidden" name="userId" value="${usuario.id}">
                             <input type="submit" value="Eliminar">
                         </form>
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     })
                     .then(data => {
                         console.log('Usuario eliminado correctamente', data);
-                        window.location.href = 'http://127.0.0.1:5500/sitio/usuarios.html'
+                        window.location.href = 'http://127.0.0.1:5000/usuarios.html'
                     })
                     .catch(error => {
                         console.error('Error al eliminar el usuario:', error);

@@ -6,6 +6,7 @@
     font-family: 'Open Sans', sans-serif; /* Actualizado para usar Open Sans */
     margin: 0;
     padding: 0;
+    
 }
 
 body {
@@ -13,6 +14,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    
 }
 
 header, main, nav {
@@ -450,9 +452,9 @@ tbody {
     margin-bottom: 10%;     
 }
 
-.boton {
+.boton, #cerrar-sesion-btn, .link-obtener-turno {
     display: inline-block;
-    background-color: #2f424e;
+    background-color: #558db0;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -460,13 +462,14 @@ tbody {
     text-align: center;
     cursor: pointer;
     text-decoration: none; /* Para quitar el subrayado del enlace */
-    width: calc(100% - 2%);
     margin: 1%;
+    width: auto;
     
 }
 
 .boton .link-inicio a{
     text-decoration: none;
+    
 }
 
 .boton:hover {
@@ -485,6 +488,22 @@ tbody {
 }
 
 /* hasta acá las cards */
+
+/* Contenedor de formulario turnos */
+
+
+
+.formularioTurnos h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.formularioTurnos label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+}
+
 
 .contenedor-formulario {
     width: 90%;
@@ -617,4 +636,128 @@ tbody {
     display:grid;
     grid-area: footer;
     width:100%;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(170, 228, 225);
+}
+
+.formulario-contenedor{
+    background-color: rgb(170, 228, 225);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    margin-bottom: 30px;  /* Espacio entre formularios */
+    text-align: center;
+
+
+}
+
+.formulario-contenedor form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.formulario-contenedor label {
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+
+.formulario-contenedor input[type="text"], 
+.formulario-contenedor input[type="password"], 
+.formulario-contenedor select, 
+.formulario-contenedor input[type="hidden"], 
+.formulario-contenedor button {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+
+}
+
+.formulario-contenedor button {
+    background-color: #31726d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.formulario-contenedor button:hover {
+    background-color: #0056b3;
+}
+
+.formulario-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario-contenedor h2 {
+    margin-bottom: 20px;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* min-height: 100vh; */
+    background-color:  rgb(170, 228, 225);;
+    padding: 20px;
+}
+.tabla-contenedor {
+    width: 80%; /* Ajusta el ancho de la tabla según sea necesario */
+    background-color:  rgb(117, 181, 178);;;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+thead th {
+    background-color:  rgb(170, 228, 225);;
+    color: rgb(40, 13, 99);
+    padding: 10px;
+    text-align: center;
+}
+tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+tbody tr:nth-child(even) {
+    background-color:  rgb(170, 228, 225);;
+}
+tbody tr:hover {
+    background-color:  rgb(170, 228, 225);;
+}
+.link-inicio, .link-obtener-turno, #cerrar-sesion-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(59, 142, 138);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+
+}
+.link-inicio:hover, .link-obtener-turno:hover, #cerrar-sesion-btn:hover {
+    background-color: #658ea3;
+
 }

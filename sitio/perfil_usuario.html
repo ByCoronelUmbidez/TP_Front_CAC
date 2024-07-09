@@ -7,30 +7,45 @@
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-    <h1>Perfil de Usuario</h1>
-    <div id="perfil-usuario">
-        <!-- Aquí se insertará dinámicamente la información del perfil del usuario -->
+    <div class="contenedor">
+        <header>
+            <nav>
+                <div class="nav-lista nav-secundaria">
+                    <ul class="nav-ul">
+                        <li class="nav-item"><a class="nav-enlace" href="./login.html">Iniciar Sesión</a></li>
+                        <li class="nav-item"><a class="nav-enlace" href="./perfil_usuario.html">Perfil</a></li>
+                        <li class="nav-item"><a class="nav-enlace" href="./usuarios.html">Usuarios</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <h1>Perfil de Usuario</h1>
+        <div id="perfil-usuario">
+            <!-- Aquí se insertará dinámicamente la información del perfil del usuario -->
+        </div>
+        <h2>Turnos Reservados</h2>
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dia y Horario</th>
+                        <th>Profesional</th>
+                        <th>Sede</th>
+                        <th>Especialidad</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-turnos">
+                    <!-- Aquí se insertarán dinámicamente los turnos reservados -->
+                </tbody>
+            </table>
+        </div>
+        <a class="link-obtener-turno" href="./buscar_turnos.html">Ir obtener turno</a>  
+        <a class="link-inicio boton" href="../index.html">Ir al inicio</a>
+        <button id="cerrar-sesion-btn">Cerrar sesión</button>
+        <footer>
+            <p>© 2024 Turnos Médicos. Todos los derechos reservados.</p>
+        </footer>
     </div>
-    <h2>Turnos Reservados</h2>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Fecha</th>
-                <th>Hora</th>
-                <th>Especialidad</th>
-                <th>Doctor</th>
-            </tr>
-        </thead>
-        <tbody id="tabla-turnos">
-            <!-- Aquí se insertarán dinámicamente los turnos reservados -->
-        </tbody>
-    </table>
-    <a class="link-inicio boton" href="./buscar_turnos.html">Ir obtener turno</a>   
-    <a class="link-inicio boton" href="../index.html">Ir al inicio</a>
-    <footer>
-        <p>© 2024 Turnos Médicos. Todos los derechos reservados.</p>
-    </footer>
     <script src="../Js/perfil_usuario.js"></script>
 </body>
 </html>
